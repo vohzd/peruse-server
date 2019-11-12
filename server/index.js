@@ -1,9 +1,9 @@
 /*
  * DEPS
  */
-const express                       = require("express");
-const port                          = 1337;
-const app                           = express();
+const express = require("express");
+const port = 1337;
+const app = express();
 //const io                            = require("socket.io")(http);
 
 /*
@@ -24,9 +24,12 @@ require("../config/server.js")(app);
  */
 
 ///const userRoutes                     = require("./routes/user/index.js");
-const basicRoutes                    = require("./routes/basicRoutes.js");
+const routes = require("./routes/routes.js");
+app.use("/libraries", express.static(__dirname + "/libraries"));
 
-app.use("/", basicRoutes);
+app.use("/", routes);
+
+// serve js lib
 //app.use("/", trackRoutes);
 
 /*
