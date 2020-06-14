@@ -1,4 +1,18 @@
-.DS_Store
-node_modules/
-dist/
+# dependencies
+node_modules
+package-lock.json
+
+# logs
 npm-debug.log
+access.json
+
+keys/jwtSecret.js
+keys/mongo.js
+keys/aws-ses.js
+keys/minio.js
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist

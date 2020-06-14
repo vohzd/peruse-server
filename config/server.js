@@ -2,7 +2,6 @@ const bodyParser                    = require("body-parser");
 const cookieParser                  = require("cookie-parser");
 
 module.exports = (app) => {
-
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
   app.use(cookieParser());
@@ -13,5 +12,4 @@ module.exports = (app) => {
     res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
     next();
   });
-
 };

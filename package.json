@@ -1,17 +1,25 @@
 {
   "name": "peruse-server",
   "description": "analytics that dont suck. good shit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "vohzd.com",
   "scripts": {
-    "dev": "nodemon ./server/index.js"
+    "dev": "cross-env NODE_ENV=development nodemon ./index.js",
+    "start": "cross-env PORT=80 node ./index.js"
   },
   "license": "MIT",
   "repository": "https://github.com/vohzd/peruse-server.git",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
+    "cookie-parser": "^1.4.5",
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "mongoose": "^5.9.18",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "uuid": "^8.1.0",
+    "ws": "^7.3.0"
   }
 }
