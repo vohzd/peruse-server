@@ -16,7 +16,7 @@ function getFingerPrint(){
 }
 
 function createWebsocket(){
-  window.ws = new WebSocket("ws://localhost:1789");
+  window.ws = new WebSocket(`ws://localhost:1789?fingerprint=${window.profile.uid}`);
   ws.onopen = (event) => {
     sendWebsocketMessage("initial-connection");
   }
